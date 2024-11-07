@@ -53,12 +53,12 @@ static LIST_HEAD(list_head);
 
 static int __init hello_init(void)
 {
-	if (count == -2) {
-		printk(KERN_WARNING "(WARNING) - print count is -2");
-	} else if (count >= 3 && count <= 10) {
-		printk(KERN_WARNING "(WARNING) - print count is benween 3 and 10");
-	} else if (count > 8) {
-		printk(KERN_ERR "(ERROR) - print count is grater than 8");
+	if (count == 0) {
+		printk(KERN_WARNING "(WARNING) - print count is 0");
+	} else if (count >= 5 && count <= 10) {
+		printk(KERN_WARNING "(WARNING) - print count is benween 5 and 10");
+	} else if (count > 10) {
+		printk(KERN_ERR "(ERROR) - print count is grater than 10");
 		return -EINVAL;
 	}
 
